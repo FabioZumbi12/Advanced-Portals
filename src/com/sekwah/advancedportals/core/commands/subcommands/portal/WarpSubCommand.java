@@ -33,11 +33,11 @@ public class WarpSubCommand extends CreateSubCommand implements SubCommand {
                     sender.sendMessage(Lang.translateColor("messageprefix.positive") + Lang.translate("command.remove.noname"));
                     return;
                 }
-                if (!player.hasPermission("advancedportals.warp."+getTagValue(args[1]))){
+                if (!player.hasPermission("advancedportals.warp."+args[1])){
                     sender.sendMessage(Lang.translateColor("messageprefix.positive") + Lang.translate("command.warp.noperm"));
                     return;
                 }
-                sender.sendMessage(Lang.translateColor("messageprefix.positive") + Lang.translateInsertVariables("command.warp.teleporting", getTagValue(args[1])));
+                sender.sendMessage(Lang.translateColor("messageprefix.positive") + Lang.translateInsertVariables("command.warp.teleporting", args[1]));
                 portal.activate(player);
             }
         }
