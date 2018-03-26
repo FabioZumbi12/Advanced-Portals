@@ -6,6 +6,7 @@ import com.sekwah.advancedportals.core.util.Lang;
 import com.sekwah.advancedportals.coreconnector.container.CommandSenderContainer;
 import com.sekwah.advancedportals.coreconnector.container.PlayerContainer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PortalBlockSubCommand implements SubCommand {
@@ -39,7 +40,7 @@ public class PortalBlockSubCommand implements SubCommand {
 
     @Override
     public List<String> onTabComplete(CommandSenderContainer sender, String[] args) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

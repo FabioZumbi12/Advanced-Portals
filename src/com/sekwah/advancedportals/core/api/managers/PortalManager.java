@@ -229,7 +229,7 @@ public class PortalManager {
         AdvancedPortalsCore.getPortalManager().savePortals();
     }
 
-    private AdvancedPortal getPortal(String portalName) {
+    public AdvancedPortal getPortal(String portalName) {
         return this.portalHashMap.get(portalName);
     }
 

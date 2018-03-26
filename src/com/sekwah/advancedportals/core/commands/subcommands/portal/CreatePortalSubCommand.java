@@ -61,7 +61,7 @@ public class CreatePortalSubCommand extends CreateSubCommand implements SubComma
 
     @Override
     public List<String> onTabComplete(CommandSenderContainer sender, String[] args) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

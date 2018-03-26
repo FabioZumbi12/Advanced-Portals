@@ -5,6 +5,7 @@ import com.sekwah.advancedportals.core.api.commands.SubCommand;
 import com.sekwah.advancedportals.core.util.Lang;
 import com.sekwah.advancedportals.coreconnector.container.CommandSenderContainer;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VersionSubCommand implements SubCommand {
@@ -20,7 +21,7 @@ public class VersionSubCommand implements SubCommand {
 
     @Override
     public List<String> onTabComplete(CommandSenderContainer sender, String[] args) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

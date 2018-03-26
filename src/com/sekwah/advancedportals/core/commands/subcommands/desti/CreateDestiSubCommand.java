@@ -64,7 +64,7 @@ public class CreateDestiSubCommand extends CreateSubCommand implements SubComman
 
     @Override
     public List<String> onTabComplete(CommandSenderContainer sender, String[] args) {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

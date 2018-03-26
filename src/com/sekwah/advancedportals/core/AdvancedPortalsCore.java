@@ -9,6 +9,7 @@ import com.sekwah.advancedportals.core.api.registry.TagRegistry;
 import com.sekwah.advancedportals.core.api.registry.WarpEffectRegistry;
 import com.sekwah.advancedportals.core.commands.CommandWithSubCommands;
 import com.sekwah.advancedportals.core.commands.subcommands.desti.CreateDestiSubCommand;
+import com.sekwah.advancedportals.core.commands.subcommands.portal.WarpSubCommand;
 import com.sekwah.advancedportals.core.commands.subcommands.portal.*;
 import com.sekwah.advancedportals.core.util.Config;
 import com.sekwah.advancedportals.core.util.DataStorage;
@@ -136,6 +137,7 @@ public class AdvancedPortalsCore {
         this.portalCommand.registerSubCommand("endgatewayblock", new EndGatewayBlockSubCommand(this));
         this.portalCommand.registerSubCommand("create", new CreatePortalSubCommand());
         this.portalCommand.registerSubCommand("remove", new RemoveSubCommand());
+        this.portalCommand.registerSubCommand("warp", new WarpSubCommand());
 
         this.commandRegister.registerCommand("portal", this.portalCommand);
     }
