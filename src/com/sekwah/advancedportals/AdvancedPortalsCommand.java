@@ -57,9 +57,11 @@ public class AdvancedPortalsCommand implements CommandExecutor, TabCompleter {
             if (args.length > 0) { switch (args[0].toLowerCase()) {
                 case "wand":
                 case "warp":
+                    boolean ok = false;
                     if (args.length == 2 && player.hasPermission("advancedportals.portal.warp")){
                         for (AdvancedPortal portal: Portal.portals){
                             if (args[1].equalsIgnoreCase(portal.getName())){
+                                ok = true;
 
                                 if (portal.inPortal.contains(player)) return true;
                                 WarpEvent warpEvent = new WarpEvent(player, portal);
@@ -70,7 +72,7 @@ public class AdvancedPortalsCommand implements CommandExecutor, TabCompleter {
                             }
                         }
                     }
-                    sendMenu(player, "Help Menu: Warp", "\u00A76/" + command + " warp <name> \u00A7a- teleport to warp name");
+                    if (!ok) sendMenu(player, "Help Menu: Warp", "\u00A76/" + command + " warp <name> \u00A7a- teleport to warp name");
                     break;
                 case "selector":
                     String ItemID = config.getConfig().getString("AxeItemId");
